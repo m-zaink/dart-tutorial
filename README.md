@@ -1,51 +1,54 @@
 # Dart Tutorial
----
-* Hello World Program
-    ```dart
-    void main() {
-        print('Hello World');
-    }
-    ```
-* Basic dart program
-    ```dart
-    int add(int a, int b) {
-        return a + b;
-    }
 
-    void main() {
-        int a = 10, b = 20;
-        print(add(a, b));
-    }
-    ```
-* Variables
+- Hello World Program
+  ```dart
+  void main() {
+      print('Hello World');
+  }
+  ```
+- Basic dart program
+
+  ```dart
+  int add(int a, int b) {
+      return a + b;
+  }
+
+  void main() {
+      int a = 10, b = 20;
+      print(add(a, b));
+  }
+  ```
+
+- Variables
   ```dart
   var name = 'Nuclei';
   const name = 'Nuclei';
   String name = 'Nuclei'
   ```
-* Built-In Types
-  * `int`
+- Built-In Types
+
+  - `int`
     ```dart
     int categoryId = 10;
     ```
-  * `double`
+  - `double`
     ```dart
     double pie = 3.14;
     ```
-  * `string`
+  - `string`
     ```dart
     string name = 'Nuclei';
     ```
-  * `bool`
+  - `bool`
     ```dart
     bool is5GreaterThan10 = 5 > 10;
     ```
-  * `list` (generics support)
+  - `list` (generics support)
     ```dart
     List<int> fiboSeries = [0, 1, 1, 2, 3, 5];
     print(fiboSeries[0]);
     ```
-  * `sets` (generics support)
+  - `sets` (generics support)
     ```dart
     Set<String> colors = {
         'red',
@@ -53,7 +56,8 @@
         'orange'
     }
     ```
-  * `map` (generics support)
+  - `map` (generics support)
+
     ```dart
     Map<int, String> numSpellings = {
         1: 'One',
@@ -63,7 +67,8 @@
 
     print('Spelling for 1 is ${numSpellings[1]}');
     ```
-* If-Else
+
+- If-Else
   ```dart
   if (isValidUser) {
     print('Welcome!');
@@ -71,7 +76,7 @@
     print('Please find a door!');
   }
   ```
-* Switch
+- Switch
   ```dart
   switch(colors) {
       case 'red':
@@ -84,60 +89,67 @@
         print('I have never seen such a color before');
   }
   ```
-* Loops
-  * `for`
+- Loops
+  - `for`
     ```dart
     for (int i = 0; i < 10; ++i) {
         print(i);
     }
     ```
-  * `for`-`in`
+  - `for`-`in`
     ```dart
     List<int> numbers = [1, 2, 3, 4];
     for (int number in numbers) {
         print(number);
     }
     ```
-  * `forEach`
+  - `forEach`
     ```dart
     List<int> numbers = [1, 2, 3, 4];
     numbers.forEach((number) => print(number));
     ```
-  * `while`
+  - `while`
     ```dart
     int i = 0;
     while (i < 10) {
         print(i++);
     }
     ```
-  * `do`-`while`
+  - `do`-`while`
     ```dart
     int i = 0;
     do {
         print(i++);
     } while(i < 10);
     ```
-* Functions (`Function`)
-    ```dart
-    int add(int a, int b) {
-        return a + b;
-    }
+- Functions (`Function`)
 
-    add(10, 20);
-    ```
-  * arrow syntax
+  ```dart
+  int add(int a, int b) {
+      return a + b;
+  }
+
+  add(10, 20);
+  ```
+
+  - arrow syntax
+
     ```dart
     int add(int a, int b) => a + b;
 
     add(10, 20);
     ```
-  * postitional params
-    ```
+
+  - postitional params
+
+    ```dart
     int add(int a, int b) => a + b;
 
     add(10, 20);
     ```
-  * named params
+
+  - named params
+
     ```dart
     int subract({int firstNumber, int secondNumber}) {
         return firstNumber + secondNumber;
@@ -145,8 +157,9 @@
 
     subtract(firstNumber: 10, secondNumber: 20);
     ```
-  * optional params
-    * positional optional params
+
+  - optional params
+    - positional optional params
     ```dart
     int add(int a, [int b]) {
         if (b != nil) {
@@ -156,7 +169,7 @@
         }
     }
     ```
-    * named optional params
+    - named optional params
     ```dart
     int add({int a, int b}) {
         if (a == nil && b == nil) {
@@ -168,8 +181,10 @@
         }
     }
     ```
-  * default params
-    * positional default params
+  - default params
+
+    - positional default params
+
     ```dart
     int add(int a, [int b = 10]) {
         return a + b;
@@ -178,13 +193,17 @@
     add(10);
     add(10, 20);
     ```
-    * named default params
+
+    - named default params
+
     ```dart
     int add({int a, int b = 10}) {
         return a + b;
     }
     ```
-  * `@required` annotation
+
+  - `@required` annotation
+
     ```dart
     import 'package:meta/meta.dart';
 
@@ -192,17 +211,21 @@
         return a + b;
     }
     ```
-* Functions As First-Class Objects
-    ```dart
-    void add10AndPrint(int a) {
-        print(a + 10);
-    }
 
-    List<int> numbers = [1, 2, 3, 4];
+- Functions As First-Class Objects
 
-    numbers.forEach(add10AndPrint);
-    ```
-* Anonymous Functions
+  ```dart
+  void add10AndPrint(int a) {
+      print(a + 10);
+  }
+
+  List<int> numbers = [1, 2, 3, 4];
+
+  numbers.forEach(add10AndPrint);
+  ```
+
+- Anonymous Functions
+
   ```dart
   List<int> numbers = [1, 2, 3, 4];
 
@@ -212,12 +235,14 @@
 
   numbers.forEach((number) => print(a + 10));
   ```
-* `assert`
+
+- `assert`
   ```dart
   int a = 10, b = 20;
   assert(a < b);
   ```
-* Classes
+- Classes
+
   ```dart
   class Bank {
       int id;
@@ -245,23 +270,26 @@
       }
   }
   ```
-  * members
-    * private
+
+  - members
+    - private
     ```dart
     class Bank {
         int _id; // _ indicated package private variable
         String _name;
     }
     ```
-    * non-private
+    - non-private
     ```dart
     class Bank {
         int id; // indicates is public variable
         String name;
     }
     ```
-  * constructors
-    * unnamed constructor
+  - constructors
+
+    - unnamed constructor
+
     ```dart
     class Bank {
         int id;
@@ -275,7 +303,9 @@
         });
     }
     ```
-    * named constructor
+
+    - named constructor
+
     ```dart
     class Bank {
         int id;
@@ -292,7 +322,9 @@
         }
     }
     ```
-  * initializer list
+
+  - initializer list
+
     ```dart
     class CartesianPoint {
         double x, y;
@@ -304,7 +336,9 @@
         CartesianPoint.fromPolarCoordinates(double r, double theta): x = r*cos(theta), y = r*sin(theta);
     }
     ```
-  * constructor redirection
+
+  - constructor redirection
+
     ```dart
     class CartesianPoint {
         double x, y;
@@ -315,8 +349,34 @@
         CartesianPoint(): this(0, 0);
     }
     ```
-  * `factory` constructor
-  * getters and setters
+
+  - `factory` constructor
+
+    ```dart
+    class Logger {
+      final String name;
+      bool mute = false;
+
+      // _cache is library-private, thanks to
+      // the _ in front of its name.
+      static final Map<String, Logger> _cache =
+          <String, Logger>{};
+
+      factory Logger(String name) {
+        return _cache.putIfAbsent(
+            name, () => Logger._internal(name));
+      }
+
+      Logger._internal(this.name);
+
+      void log(String msg) {
+        if (!mute) print(msg);
+      }
+    }
+    ```
+
+  - getters and setters
+
     ```dart
     class CartesianPoint {
         double x, y, midPoint;
@@ -341,25 +401,244 @@
         }
     }
     ```
-  * abstract methods and interfaces
-  * implicity interfaces
-  * inheritances via `extends`
-  * `overriding` methods
-  * operator overriding
-  * `noSuchMethod()`
-* Special Operators
-  * Cascade (..)
-  * Spread (...)
-  * Conditional Member Access (?.)
-  * If Null (??)
-* Exception Handling
-  * `try`
-  * `catch`
-  * `on`-`catch`
-  * `finally`
-  * `throw`
-* Extensions
-* Enums
-* `mixin` and `with`
-* Asynchronous supportss
-  * Futures
+
+  - abstract methods and interfaces
+
+    ```dart
+    abstract class Bank {
+      void makeSales();
+    }
+
+    class IndianBank implements Bank {
+      @override
+      void makeSales() {
+        print('Making sales...');
+      }
+    }
+    ```
+
+  - implicity interfaces
+
+  ```dart
+  class Person {
+    final String _name;
+
+    Person(this._name);
+
+    String greet(String who) => 'Hello, $who. I am $_name.';
+  }
+
+  class Impostor implements Person {
+    get _name => '';
+
+    String greet(String who) => 'Hi $who. Do you know who I am?';
+  }
+  ```
+
+  - inheritances via `extends`
+
+    ```dart
+    abstract class Bank {
+      void makeSales();
+    }
+
+    class IndianBank extends Bank {
+      @override
+      void makeSales() {
+        print('Making sales...');
+      }
+    }
+    ```
+
+  - `overriding` methods
+
+    ```dart
+    abstract class Bank {
+      void makeSales();
+    }
+
+    class IndianBank extends Bank {
+      @override
+      void makeSales() {
+        print('Making sales...');
+      }
+    }
+    ```
+
+  - operator overriding
+
+    ```dart
+    class Vector {
+      final int x, y;
+
+      Vector(this.x, this.y);
+
+      Vector operator +(Vector v) => Vector(x + v.x, y + v.y);
+      Vector operator -(Vector v) => Vector(x - v.x, y - v.y);
+    }
+    ```
+
+  - `noSuchMethod()`
+    ```dart
+    class A {
+      // Unless you override noSuchMethod, using a
+      // non-existent member results in a NoSuchMethodError.
+      @override
+      void noSuchMethod(Invocation invocation) {
+        print('You tried to use a non-existent member: ' +
+            '${invocation.memberName}');
+      }
+    }
+    ```
+
+- Special Operators
+
+  - Cascade (..)
+
+    ```dart
+    class Bank {
+      int id = 1;
+      String name = "Indian Name";
+      String countryCode = "+91";
+    }
+
+    Bank bank = Bank()
+                ..id = 2
+                ..name = "Gulf bank";
+    ```
+
+  - Spread (...)
+
+    ```dart
+    List<String> supportStaff = [
+      'A',
+      'B'
+    ];
+
+    List<String> Staff = [
+      ...supportStaff,
+      'C',
+      'D'
+    ]; // ['A', 'B', 'C', 'D']
+    ```
+
+  - Conditional Member Access (?.)
+
+  ```dart
+  class Bank {
+    final int id;
+    final String name;
+
+    Bank({this.id, this.name});
+  }
+
+  void main() {
+    Bank bank = getBank();
+    print(bank?.name); // bank.name gets evaluated to `null` if bank is empty
+  }
+  ```
+
+  - If Null (??)
+
+  ```dart
+  class Bank {
+    final int id;
+    final String name;
+
+    Bank({this.id, this.name});
+  }
+
+  void main() {
+    Bank bank = getBank();
+    print(bank?.name ?? 'No Bank Found'); // bank.name gets evaluated to `null` if bank is empty
+  }
+  ```
+
+- Exception Handling
+
+  - `try`
+  - `catch`
+  - `on`-`catch`
+  - `finally`
+
+  ```dart
+  try {
+    bank.makePayment();
+  } on InsufficientFunds {
+    // handle this case
+  } on MonthlyLimitReached catch (e) {
+    // handle this case
+  } catch (e) {
+    // general case
+  } finally {
+    bank.closeTransaction();
+  }
+  ```
+
+  - `throw`
+
+  ```dart
+  class Bank {
+    //...
+    void makePayments() {
+      if (insuffienctFunds()) {
+        throw InsufficientFunds();
+      } else if (monthlyLimitReached()) {
+        throw MonthlyLimitReached(monthlyLimit: 1000);
+      } else if (bankSecretIssue()) {
+        throw "Unknow issue occured";
+      } else {
+        // proceed to make payment
+      }
+    }
+  }
+  ```
+
+- Extensions
+
+  ```dart
+  extension NumberParsing on String {
+    int parseInt() {
+      return int.parse(this);
+    }
+    // ···
+  }
+
+  extension on String {
+    String get localized {
+      // some localization logic
+    }
+  }
+
+  void main() {
+    print("Process To Pay".localized);
+  }
+  ```
+
+- Enums
+
+  ```dart
+  enum ViewPresentationStyles {
+    leftPush, rightPush, bottomModal, topModal, present
+  }
+
+  ViewPresentationStyles.leftPush
+  ```
+
+- Asynchronous supports
+
+  ```dart
+  Future<String> getToken() async {
+    // start querying for token
+    String token = await backend.getToken();
+
+    return token;
+  }
+
+  void main() async {
+    String token = await getToken(); // blocking call.
+
+    // executes after the above call returns.
+    print(token);
+  }
+  ```
